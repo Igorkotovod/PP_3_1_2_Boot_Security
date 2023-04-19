@@ -32,7 +32,7 @@
     </tbody>
 </table>
 <br>
-<div sec:authorize="hasAuthority('ROLE_ADMIN')">
+<div sec:authorize="hasRole('ROLE_ADMIN')">
     <form action="/admin" target="_self">
         <button>Вернуться к списку пользователей</button>
     </form>
