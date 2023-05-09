@@ -8,7 +8,9 @@
           integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-<h1 th:text="${titleTable} + ${user.getName()} +' '+ ${user.getLast_name()}"/>
+<h1
+        th:text="${user.getUsername()} +' with roles: '+ ${user.getRolesInString()}">
+</h1>
 <table class="table">
     <thead>
     <tr>
@@ -27,7 +29,7 @@
         <td th:text="${user.getLast_name()}"></td>
         <td th:text="${user.getUsername()}"></td>
         <td th:text="${user.getPassword()}"></td>
-        <td th:text="${user.getRoles()}"></td>
+        <td th:text="${user.getRolesInString()}"></td>
     </tr>
     </tbody>
 </table>

@@ -123,6 +123,17 @@ public class User implements UserDetails {
                 ", roles=" + roles.toString() +
                 '}';
     }
+
+    public String getRolesInString(){
+        StringBuilder resultString = new StringBuilder();
+        for (Role role: roles){
+            String currentRoleString = role.getName();
+            resultString.append(currentRoleString.substring(5));
+            resultString.append("  ");
+        }
+        return resultString.toString();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
